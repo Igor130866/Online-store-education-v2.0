@@ -1,0 +1,96 @@
+@import "font";
+@import "core";
+@import "footer";
+
+//@import "mixins/mixins";
+//@import "my_main";
+
+// ================ HEADER ====================
+
+.navbar-custom {
+	background-color: #fff;
+	text-transform: uppercase;
+	padding-top: 0px;
+	position: relative;
+}
+.navbar-custom-dropdown {
+	z-index: 100;
+	position: absolute;
+}
+.nav-item .dropdown-menu {
+	font-size: 16px;
+	color: #000;
+}
+.carousel-caption {
+	padding-bottom: 4%;
+	text-align: left;
+	left: 17%;
+}
+.carousel-caption p {
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+.input-group-logo {
+	width: 35%;	
+}
+.navbar-nav-logo {
+	justify-content: space-between;
+}
+.navbar-collapse-logo {
+	justify-content: space-around;
+	flex-grow: 0;
+}
+.nav-item a {
+	padding: 0 auto;	
+}
+.nav-link-logo {
+	color: #fff;
+	font-size: 20px;
+}
+.nav-link-logo :hover {
+	color: #ec4835;
+}
+.navbar-brand> img {
+	position: absolute;
+	z-index: 33;
+}
+.carousel-item-brand {
+	z-index: 10;
+	opacity: 0;
+}
+//======================== Контент ============================
+
+.main-slogan {
+	background: white;
+	text-align: center;
+	border-top: 3px solid #dadada;
+	border-bottom: 3px solid #dadada;
+}
+// ==================== Sitebar  ===========================
+
+.sitebar {
+	padding: 20px 0 70px;
+	border-right: 3px solid #dadada;
+}
+.widget {
+	border-bottom: 3px solid #dadada;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+.widget ul {
+	list-style: none;
+	padding-left: 0px;
+}
+.widget ul li a {
+	color: #000;
+	font-size: 16px;
+	line-height: 30px;
+	display: inline-block;
+}
+.widget h3, .content h3 {
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+.content {
+	padding: 20px 0 70px;
+}
