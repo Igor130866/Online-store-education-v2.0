@@ -120,14 +120,8 @@ h1 {
   border-top: 3px solid #dadada;
   border-bottom: 3px solid #dadada; }
 
-.sitebar {
-  padding: 20px 0 70px;
-  border-right: 3px solid #dadada; }
-
 .widget {
-  border-bottom: 3px solid #dadada;
-  padding-bottom: 30px;
-  margin-bottom: 30px; }
+  border-bottom: 3px solid #dadada; }
 
 .widget ul {
   list-style: none;
@@ -139,11 +133,17 @@ h1 {
   line-height: 30px;
   display: inline-block; }
 
-.widget h3, .content h3 {
-  margin-top: 0;
+.widget h3 {
+  margin-top: 130px; }
+
+.content h3 {
+  margin-top: 10px;
   margin-bottom: 40px; }
 
 .content {
   padding: 20px 0 70px; }
+
+.password {
+  margin-right: 20px; }
 
 /*# sourceMappingURL=../maps/main.css.map */

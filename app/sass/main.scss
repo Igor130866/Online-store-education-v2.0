@@ -68,15 +68,9 @@
 }
 // ==================== Sitebar  ===========================
 
-.sitebar {
-	padding: 20px 0 70px;
-	border-right: 3px solid #dadada;
-}
 .widget {
 	border-bottom: 3px solid #dadada;
-	padding-bottom: 30px;
-	margin-bottom: 30px;
-}
+	}
 .widget ul {
 	list-style: none;
 	padding-left: 0px;
@@ -87,10 +81,16 @@
 	line-height: 30px;
 	display: inline-block;
 }
-.widget h3, .content h3 {
-	margin-top: 0;
+.widget h3 {
+	margin-top: 130px;
+}
+.content h3 {
+	margin-top: 10px;
 	margin-bottom: 40px;
 }
 .content {
 	padding: 20px 0 70px;
+}
+.password {
+	margin-right: 20px;
 }

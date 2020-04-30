@@ -73,6 +73,18 @@ var gulp        = require('gulp'),
         .pipe(browserSync.reload({stream: true})); // Обновляем JS на странице при изменении
         done();
 });
+
+    gulp.task('js-main-admin', function (done) {
+      return gulp.src('app/js/partials_admin/*.js')
+      .pipe(plumber())
+      .pipe(sourcemaps.init())
+      .pipe(concat('main-admin.js')) // Собираем их в кучу в новом файле main.js
+      .pipe(babel())
+      .pipe(sourcemaps.write('../maps'))
+      .pipe(gulp.dest('app/js'))
+      .pipe(browserSync.reload({stream: true})); // Обновляем JS на странице при изменении
+      done();
+    });
   
     gulp.task('js-mainmin', function(done) {
         return gulp.src('app/js/main.js')
@@ -88,6 +100,21 @@ var gulp        = require('gulp'),
       //  .pipe(browserSync.stream()); // Обновляем JS на странице при изменении
         done();
 });
+
+    gulp.task('js-main-adminmin', function(done) {
+      return gulp.src('app/js/main-admin.js')
+      .pipe(plumber()) // для отслеживания ошибок
+    //   .pipe(cache())
+      .pipe(sourcemaps.init())        
+      .pipe(cache(terser()))           // Сжимаем main.js
+      .pipe(rename({suffix: '.min'}))
+      .pipe(sourcemaps.write('../maps'))
+      .pipe(gulp.dest('app/js'))
+    //  .on('end', browserSync.reload);
+      .pipe(browserSync.reload({stream: true})); // Обновляем JS на странице при изменении
+    //  .pipe(browserSync.stream()); // Обновляем JS на странице при изменении
+      done();
+    });
 
     gulp.task('js-libs', function(done) {
         return gulp.src([ // Берем все необходимые библиотеки
@@ -133,6 +160,7 @@ var gulp        = require('gulp'),
     gulp.watch('app/*.html').on('change', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/**/*.php').on('change', browserSync.reload); // Наблюдение за PHP файлами в проекте
     gulp.watch(['app/js/partials/*.js'], gulp.series('js-main', 'js-mainmin')); // Наблюдение за JS файлами
+    gulp.watch(['app/js/partials_admin/*.js'], gulp.series('js-main-admin', 'js-main-adminmin')); // Наблюдение за JS файлами
     gulp.watch(['app/libs/**/*.js'], gulp.series('js-libs', 'js-libsmin')); // Наблюдение за JS библиотеками
     gulp.watch(['app/libs/**/*.scss'], gulp.series('sass', 'css-mainmin', 'css-libsmin')); // Наблюдение за SCSS файлами в библиотеке
 });
@@ -204,14 +232,24 @@ var gulp        = require('gulp'),
 });
 
     gulp.task ('buildHtml', function() {
-        return gulp.src('app/*.php') // Переносим HTML в продакшен
+        return gulp.src('app/*.html') // Переносим HTML в продакшен
 	.pipe(gulp.dest('dist'));
 });
 
-    gulp.task('build', gulp.series(gulp.parallel('sass', 'js-main', 'js-libs'), 
+gulp.task ('buildPhp', function() {
+  return gulp.src('app/*.php') // Переносим HTML в продакшен
+.pipe(gulp.dest('dist'));
+});
+
+gulp.task ('buildPhp_admin', function() {
+  return gulp.src('app/admin/*.php') // Переносим HTML в продакшен
+.pipe(gulp.dest('dist'));
+});
+
+    gulp.task('build', gulp.series(gulp.parallel('sass', 'js-main', 'js-main-admin', 'js-libs'), 
                                    gulp.parallel('css-libsmin', 'js-libsmin'),
-                                   gulp.parallel('css-mainmin', 'js-mainmin'),
+                                   gulp.parallel('css-mainmin', 'js-mainmin', 'js-main-adminmin'),
                                    'clean',
-                                   gulp.parallel('imgmin', 'buildCss', 'buildFonts', 'buildJs', 'buildHtml')));
+                                   gulp.parallel('imgmin', 'buildCss', 'buildFonts', 'buildJs', 'buildHtml', 'buildPhp', 'buildPhp_admin')));
 
 

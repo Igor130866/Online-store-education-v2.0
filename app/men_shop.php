@@ -1,3 +1,7 @@
+<?php
+ require_once('header.php');
+ ?>
+
 <section class="main-content">
     <div class="container">
       <div class="row">
@@ -33,45 +37,19 @@
         </div>
         <div class="col-md-9">
           <div class="content">
-            <h3>Женская одежда</h3>
+            <h3>Мужская одежда</h3>
             <div class="card-deck mb-3">
               <div class="card text-center">
-                <img src="img/goods5.jpg" class="card-img-top" alt="...">
+                <img src="img/goods4.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Название карточки</h5>
                   <p class="card-text">Краткое описание товара</p>
+                  <p class="card-text">Артикул товара</p>
                   <p class="card-text">Стоимость : <span class="price"> 100 </span> руб</p>
                   <a href="#" class="btn btn-sm btn-red">Добавить в корзину</a>
                 </div>
               </div>
               <div class="card text-center">
-                <img src="img/goods5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Название карточки</h5>
-                  <p class="card-text">Краткое описание товара</p>
-                  
-                </div>
-              </div>
-              <div class="card text-center">
-                <img src="img/goods5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Название карточки</h5>
-                  <p class="card-text">Краткое описание товара</p>
-                  
-                </div>
-              </div>
-            </div>
-            <h3>Мужская одежда</h3>
-            <div class="card-deck">
-              <div class="card text-center">
-                <img src="img/goods4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Название карточки</h5>
-                  <p class="card-text">Краткое описание товара</p>
-                  
-                </div>
-              </div>
-              <div class="card text-center">
                 <img src="img/goods4.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Название карточки</h5>
@@ -88,8 +66,13 @@
                 </div>
               </div>
             </div>
+           
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <?php
+  require_once('footer.php');
+ ?>

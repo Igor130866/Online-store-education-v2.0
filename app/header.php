@@ -13,10 +13,10 @@
   
 </head>
 <body>
-  <header  >
+  <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
       <div class="container mt-2">
-        <a class="navbar-brand" href="#">StyleTour</a>
+        <a class="navbar-brand" href="index.php">StyleTour</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>      
@@ -48,9 +48,43 @@
             </div>
             </li>
           </ul>
-          <form class="form-inline mr-3 my-2 my-lg-0">
-            <button class="btn btn-red my-2 my-sm-0" type="submit">ВОЙТИ</button>
-          </form>
+
+          <button type="button" class="btn btn-red my-sm-0 mr-3 my-2 my-lg-0" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Войти</button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">ВХОД В Личный кабинет</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="admin" action = "registre.php" method = "POST" class=" form-inline mr-3 my-2 my-lg-0">
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Логин </label>
+                      <input type="text" class="form-control input-admin ml-5" id="recipient-name" name="login">
+                    </div>
+                    <div class="form-group mt-1 mb-3">
+                      <label for="message-text" class="password col-form-label">Пароль</label>
+                      <input type="password" class=" form-control input-adminn ml-4" id="message-text" name="pass">
+                    </div>
+                      <button type="submit" class="btn btn-primary">Согласен</button>
+                  </form>  
+                </div>
+                  
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--    
+            <button class="btn btn-red my-2 my-sm-0" type="submit">Войти</button>
+           
+          --> 
+          
           <form class="form-inline my-2 my-lg-0">
             <button class="btn btn-red my-2 my-sm-0" type="submit"><i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i>КОРЗИНА</button>
           </form>
@@ -60,17 +94,14 @@
       
     <nav class="navbar navbar-expand-lg bg-dark navbar-custom pb-0">
       <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> 
         <a class="navbar-brand" href="#"><img src="img/logo.png" alt="33"></a>
         <div class="collapse navbar-collapse navbar-collapse-logo" id="navbarSupportedContent">
           <ul class="navbar-nav navbar-nav-logo">
             <li class="nav-item active">
-              <a class="nav-link nav-link-logo" href="#">Women</a>
+              <a id = "women" class="nav-link nav-link-logo" href="women_shop.php">Women</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-logo" href="#">Men</a>
+              <a class="nav-link nav-link-logo" href="men_shop.php">Men</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-logo" href="#">Shop</a>
@@ -81,8 +112,10 @@
           </ul>  
           <form class="form-inline my-2 my-lg-0">
             <div class="form-group mx-sm-3">
-              <label for="inputPassword2" class="sr-only">Password</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Что желаете">
+              <form>            
+                <label for="inputPassword2" class="sr-only">Password</label>
+                <input type="password" class="form-control" id="inputPassword2" placeholder="Что желаете">
+              </form>  
             </div>
             <button class="btn btn-red my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
           </form>
