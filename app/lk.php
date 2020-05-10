@@ -2,15 +2,20 @@
 session_start();
 require_once('header.php');
 ?>
-    <section class = "persona-room">
-      <div class="container">
-        <h1 class = "mt-5 pt-5">Добро пожаловать в личный кабинет</h1>
-      </div>
-      <span>Уважаемый</span>
-      <?php
-        echo "Вы обновили эту страницу ".$_SESSION["login"];
-      ?>
-   </section> 
+  <section class = "persona-room">
+    <div class="container">
+      <div class="d-flex justify-content-end h4">
+        <div class = "mt-3 mr-3" >Уважаемый   
+        
+        <?php
+          echo "   ".$_SESSION["login"].",  ";
+        ?>  
+        </div> 
+        <div class = "mt-3">, добро пожаловать в личный кабинет.
+        </div>          
+      </div>   
+    </div>      
+  </section> 
    <!--  
 <?php
 //  require_once('footer.php');

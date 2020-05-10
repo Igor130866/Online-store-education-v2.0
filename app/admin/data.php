@@ -11,25 +11,25 @@ require_once "top.php";
   
   <div id="rowdata" class="row">
     <div class="col-md-3">  
-      <p>Имя</p> 
+      <p></p> 
     </div>
     <div class="col-md-3">
-      <p>Телефон</p>
+      <p>Проданный товар</p>
     </div>
     <div class="col-md-3">
-      <p>Электронная почта</p>
+      <p>Остаток на складе</p>
     </div>
     <div class="col-md-3">
-      <p>Дата обращения</p>
+      <p>Добавить / Удалить товар</p>
     </div>
   </div>
-  
+ <!-- 
   <div id="result" class="row">
-    <?php $order = 0; ?>
-    <?php foreach ($result as $order)  ?>
-    <?php {echo $order;}  ?>
+   // <?php $order = 0; ?>
+   // <?php foreach ($result as $order)  ?>
+   // <?php {echo $order;}  ?>
   </div>
-
+-->
 <?php 
   require_once "end.php";
 ?>

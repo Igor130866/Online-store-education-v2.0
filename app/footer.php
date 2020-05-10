@@ -1,10 +1,10 @@
 <section class="content-email">
     <div class="container">
-      <div class="row d-flex">
+      <div class="row d-flex mr-0">
         <div class="col-md-2 d-flex align-self-center">
           <h6>Желаете узнать больше</h6>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 mr-0 pr-2 pl-0">
           <form id = "post" action = "clients_obr.php" method = "POST" class = "form-bd">
             <div class="d-flex justify-content-between form-row align-items-center">
               <div class="col-auto">

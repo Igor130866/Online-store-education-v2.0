@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  //session_start();
 
   require_once('lib_query/start.php');
   require_once('header.php');

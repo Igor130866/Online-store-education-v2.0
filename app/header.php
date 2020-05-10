@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Техподдержка<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">О компании<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,12 +49,12 @@
             </li>
           </ul>
 
-          <button type="button" class="btn btn-red my-sm-0 mr-3 my-2 my-lg-0" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Войти</button>
+          <button type="button" class="btn btn-red my-sm-0 mr-3 my-2 my-lg-0" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Сначала надо войти<?php if ((isset($_SESSION["login"]))){echo ', Спасибо!!!';}?></button>
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">ВХОД В Личный кабинет</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Авторизация / Регистрация</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"></span>
                   </button>
@@ -69,12 +69,12 @@
                       <label for="message-text" class="password col-form-label">Пароль</label>
                       <input type="password" class=" form-control input-adminn ml-4" id="message-text" name="pass">
                     </div>
-                      <button type="submit" class="btn btn-primary">Согласен</button>
+                      <button type="submit" class="btn btn-primary">По моему так</button>
                   </form>  
                 </div>
                   
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Забыл кошелек ?</button>
                 </div>
               </div>
             </div>
@@ -83,11 +83,12 @@
           <!--    
             <button class="btn btn-red my-2 my-sm-0" type="submit">Войти</button>
            
-          --> 
+           
           
           <form class="form-inline my-2 my-lg-0">
             <button class="btn btn-red my-2 my-sm-0" type="submit"><i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i>КОРЗИНА</button>
           </form>
+        -->
         </div>
       </div> 
     </nav>
@@ -95,19 +96,19 @@
     <nav class="navbar navbar-expand-lg bg-dark navbar-custom pb-0">
       <div class="container">
         <a class="navbar-brand" href="#"><img src="img/logo.png" alt="33"></a>
-        <div class="collapse navbar-collapse navbar-collapse-logo" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse navbar-collapse-logo mr-3" id="navbarSupportedContent">
           <ul class="navbar-nav navbar-nav-logo">
             <li class="nav-item active">
-              <a id = "women" class="nav-link nav-link-logo" href="women_shop.php">Women</a>
+              <a id = "women" class="nav-link nav-link-logo <?php if (!(isset($_SESSION["login"]))){echo 'd-none';}?>" href="card_women.php">Women</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-logo" href="men_shop.php">Men</a>
+              <a class="nav-link nav-link-logo <?php if (!(isset($_SESSION["login"]))){echo 'd-none';}?>" href="card_men.php">Men</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-logo" href="#">Shop</a>
+              <a class="nav-link nav-link-logo <?php if (!(isset($_SESSION["login"]))){echo 'd-none';}?>" href="#">Shop</a>
             </li>                
             <li class="nav-item">
-              <a class="nav-link nav-link-logo" href="#">Kids</a>
+              <a class="nav-link nav-link-logo <?php if (!(isset($_SESSION["login"]))){echo 'd-none';}?>" href="#">Kids</a>
             </li>
           </ul>  
           <form class="form-inline my-2 my-lg-0">

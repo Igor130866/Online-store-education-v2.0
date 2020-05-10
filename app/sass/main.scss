@@ -1,11 +1,15 @@
 @import "font";
 @import "core";
 @import "footer";
+@import "admin";
+
+$width: 160px;
+$height: 200px;
 
 //@import "mixins/mixins";
 //@import "my_main";
 
-// ================ HEADER ====================
+// ================ HEADER ===================
 
 .navbar-custom {
 	background-color: #fff;
@@ -94,3 +98,42 @@
 .password {
 	margin-right: 20px;
 }
+.wid-hei { 
+	width: $width;
+  height: $height;
+} 
+.card-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+//======================= Корзина ====================
+
+.form-basket {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.count-input {
+	margin-right: 1rem;
+	margin-left: 1rem;
+	border: 1px, solid, #000;
+	padding: 8px;
+}
+
+.count-minus, .count-plus {
+	cursor: pointer;
+	font-size: 20px;
+}
+
+#post {
+	margin-right: 20px;
+}
+
+.count_bold {
+	font-weight: 800;
+}
+

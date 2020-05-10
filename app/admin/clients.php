@@ -5,12 +5,12 @@ $orders = getOrders();
 ?>
 
 <div class="container">
-  <h1>Общая информация</h1> 
+  <h4>Общая информация о любопытных</h4> 
   <!--<form id="data-total-amount">
     <button class="btn btn-red" type="submit">ИТОГО</button>
   </form>-->
   
-  <div id="rowdata" class="row">
+  <div id="rowdata" class="row row-bold">
     <div class="col-md-2">  
       <p>ID</p> 
     </div>

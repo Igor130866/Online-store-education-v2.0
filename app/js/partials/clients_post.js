@@ -3,13 +3,13 @@ let forma = document.querySelector('#post');
 
 forma.onsubmit = function (event) {
     event.preventDefault();
-    //console.log(e.target);
+    console.log(e.target);
     let formDataa = new FormData(forma);
    
     document.querySelector('.input-request').value = '';
     document.querySelector('.input-requestt').value = '';
     document.querySelector('.input-requesttt').value = '';
-     alert(forma);
+     
     fetch('lib_query/clients_obr.php', {
         method: 'POST',
         body: formDataa,

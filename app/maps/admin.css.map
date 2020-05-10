@@ -1,0 +1,1 @@
+{"version":3,"sources":["admin.scss"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,eAAe;EACf,mBAAmB,EAAA","file":"../sass/admin.css","sourcesContent":[".row-table {\r\n  border: 2px solid #000;\r\n  font-size: 20px;\r\n  margin-bottom: 30px;\r\n}"]}

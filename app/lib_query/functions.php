@@ -7,7 +7,6 @@ return $result;
 }
 
 function getTable($query) {
-
   global $mysqli;
   $result_set = $mysqli->query($query);
   if (is_null($result_set)) return false;
@@ -16,9 +15,28 @@ function getTable($query) {
     $result[] = $row;
   }
   $result_set->close();
-
 return $result;
 }
+
+function group_numerals($int) {
+  switch (strlen($int)) {
+    case '4':
+      $price = substr($int,0,1).' '.substr($int,1,4);
+      break;
+    case '5':
+      $price = substr($int,0,2).' '.substr($int,2,5);
+      break;
+     case '6':
+      $price = substr($int,0,3).' '.substr($int,3,6);
+      break;
+    default:
+      $price = $int;
+      break;
+  }
+  return $price;
+}
+
+
 /*function isAdmin ($login = false, $password = false) {
   if (!$login) $login = isset($_SESSION["login"])? $_SESSION["login"] : false;
   if (!$password) $password = isset($_SESSION["password"])? $_SESSION["password"] : false;
